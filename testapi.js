@@ -38,9 +38,9 @@ request.post(`https://${config.domain}/api/v1/polyform/origination.predict`,
   }, (err, res, body) => {
     if (err) { console.log(err) }
     if (res.statusCode === 200) {
-      console.log(`Request Made, result: ${res}`)
+      console.log(`Request Made, result: ${res.body}`)
     } else {
-      console.log('Unexpected result=' + res.statusCode + '\n' + JSON.stringify(res))
+      console.log('Unexpected result=' + res.statusCode + '\n' + res.body)
     }
   }
 )
